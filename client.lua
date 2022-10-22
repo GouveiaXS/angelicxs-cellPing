@@ -132,7 +132,7 @@ AddEventHandler('angelicxs-cellPing:EnterCellNumber', function()
                 }
             })    
             if sellingItem then
-                    if sellingItem.amount > 0 then
+                    if sellingItem.amount then
                         phonenumber = sellingItem.amount
                 else
                     TriggerEvent('angelicxs-cellPing:Notify', Config.Lang['zero_error'], Config.LangType['error'])
@@ -153,7 +153,7 @@ end)
 RegisterNetEvent('angelicxs-cellPing:TrackingPhone')
 AddEventHandler('angelicxs-cellPing:TrackingPhone', function(targetCoords, phone)
 	if isLawEnforcement then		
-        TriggerEvent('angelicxs-cellPing:Notify', Config.Lang['track_phone']..phone, Config.LangType['error'])
+        TriggerEvent('angelicxs-cellPing:Notify', Config.Lang['track_phone']..phone, Config.LangType['success'])
 		local Alpha = 640
 		local TrackerDevice = AddBlipForCoord(targetCoords.x, targetCoords.y, targetCoords.z)
         SetBlipSprite(TrackerDevice, Config.PhoneSprite)
