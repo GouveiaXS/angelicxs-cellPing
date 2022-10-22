@@ -76,7 +76,7 @@ AddEventHandler('angelicxs-cellPing:CheckPhoneNumber', function(phone)
     TriggerServerEvent('angelicxs-cellPing:Server:PhonePing', phone, PlayerCoods)
 end)
 CreateThread(function()
-    if Use.UseChatCommand then
+    if Config.UseChatCommand then
         RegisterCommand(Config.ChatCommand, function()
             TriggerEvent('angelicxs-cellPing:EnterCellNumber')
         end)
