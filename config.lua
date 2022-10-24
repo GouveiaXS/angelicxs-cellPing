@@ -19,7 +19,7 @@ AddEventHandler('angelicxs-cellPing:CustomNotify', function(message, type)
     --exports.mythic_notify:SendAlert(type, message, 4000)
 end)
 
-Config.LEOJobName = 'police'                -- Name of police job
+Config.LEOJobName = {'police'}                -- Name of police job
 
 Config.UseChatCommand = true				-- If true, use a /command to activate cell ping
 Config.ChatCommand = 'ping'					-- If Config.UseChatCommand = true, sets the command to ping cellphone
