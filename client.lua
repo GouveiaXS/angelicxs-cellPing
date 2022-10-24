@@ -170,11 +170,10 @@ AddEventHandler('angelicxs-cellPing:TrackingPhone', function(targetCoords, phone
 end)
 
 function LawEnforcement()
-    if not PlayerJob then
-        return false
-    elseif PlayerJob ~= Config.LEOJobName then
-        return false
-    elseif PlayerJob == Config.LEOJobName then
-        return true
-    end
+	for i = 1, #Config.LEOJobName do
+		if PlayerJob == Config.LEOJobName[i] then
+			return true
+		end
+	end
+	return false
 end
