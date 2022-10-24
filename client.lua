@@ -82,23 +82,25 @@ CreateThread(function()
         end)
     end
     if Config.UseThirdEye then
-        exports[Config.ThirdEyeName]:AddBoxZone('angelicxs-cellPing', Config.ThirdEyeTerminal, 2, 2, {
-            name = 'angelicxs-cellPing',
-            heading = 0,
-            debugPoly = false,
-            minZ = Config.ThirdEyeTerminal.z - 1.5,
-            maxZ = Config.ThirdEyeTerminal.z + 1.5
-        },
-        {
-            options = {
-                {
-                    event = 'angelicxs-cellPing:EnterCellNumber',
-                    icon = "fas fa-sign-in-alt",
-                    label = Config.Lang['access'],
-                },
+        for location, terminal in pairs (Config.TerminalLocations) do
+            exports[Config.ThirdEyeName]:AddBoxZone(location..'angelicxs-cellPing', terminal, 2, 2, {
+                name = location..'angelicxs-cellPing',
+                heading = 0,
+                debugPoly = false,
+                minZ = terminal.z - 1.5,
+                maxZ = terminal.z + 1.5
             },
-            distance = 1.5 
-        })
+            {
+                options = {
+                    {
+                        event = 'angelicxs-cellPing:EnterCellNumber',
+                        icon = "fas fa-sign-in-alt",
+                        label = Config.Lang['access'],
+                    },
+                },
+                distance = 1.5 
+            })
+        end
     end
 end)
 
