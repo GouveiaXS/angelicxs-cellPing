@@ -26,8 +26,10 @@ Config.ChatCommand = 'ping'					-- If Config.UseChatCommand = true, sets the com
 
 Config.UseThirdEye = true 					-- Enables using a third eye (third eye requires the following arguments debugPoly, useZ, options {event, icon, label}, distance)
 Config.ThirdEyeName = 'qb-target' 			-- Name of third eye aplication
-Config.ThirdEyeTerminal = vector3(100.1,120.2,130.3)	-- Location of Third Eye spot
+Config.ThirdEyeTerminal = { 				-- Location of Third Eye spot
+	vector3(450.2, -987.62, 30.69),
 
+}
 Config.WaitTIme = 20						-- How long (in seconds) will the ping be on the map
 Config.NHInput = false						-- Use NH-Input [https://github.com/nerohiro/nh-keyboard] ONLY used if Config.VehicleTimeLimit = true
 Config.QBInput = false						-- Use QB-Input (Ignored if Config.NHInput = true) [https://github.com/qbcore-framework/qb-input] ONLY used if Config.VehicleTimeLimit = true
