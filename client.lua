@@ -82,13 +82,13 @@ CreateThread(function()
         end)
     end
     if Config.UseThirdEye then
-        for i=1, #Config.TerminalLocations, 1 do
-            exports[Config.ThirdEyeName]:AddBoxZone(Config.TerminalLocations[i]..'angelicxs-cellPing', Config.TerminalLocations[i], 2, 2, {
-                name = Config.TerminalLocations[i]..'angelicxs-cellPing',
+        for i=1, #Config.ThirdEyeTerminal, 1 do
+            exports[Config.ThirdEyeName]:AddBoxZone(Config.ThirdEyeTerminal [i]..'angelicxs-cellPing', Config.ThirdEyeTerminal[i], 2, 2, {
+                name = Config.ThirdEyeTerminal [i]..'angelicxs-cellPing',
                 heading = 0,
                 debugPoly = false,
-                minZ = Config.TerminalLocations[i].z - 1.5,
-                maxZ = Config.TerminalLocations[i].z + 1.5
+                minZ = Config.ThirdEyeTerminal[i].z - 1.5,
+                maxZ = Config.ThirdEyeTerminal[i].z + 1.5
             },
             {
                 options = {
